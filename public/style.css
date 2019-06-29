@@ -35,7 +35,14 @@ body {
   line-height: 147%;
 }
 
-h1 {}
+@font-face {
+  font-family: starwars;
+  src: url(/public/font/STARWARS.woff);
+}
+
+h1 {
+  margin: 0;
+}
 
 h2 {}
 
@@ -72,11 +79,11 @@ p {
 }
 
 #site-main {
-  margin: auto;
+  width: 100%;
 }
 
 .container {
-  margin: 0 20px;
+  width: 100%;
 }
 
 .section {
@@ -86,8 +93,7 @@ p {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 728px;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -168,5 +174,76 @@ a {
   } 50% { 
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
+  }
+}
+
+/* ---- hero-header ---- */
+
+#hero-header{
+  font-family: 'Oswald', sans-serif;
+  background: url(./images/space-bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: relative;
+}
+#hero-header h1{
+  width: 100%;
+  color: aqua;
+  position: absolute;
+  font-size: 4em;
+  text-align: center;
+  opacity: 0;
+  animation: opacity 25s ease-in;
+}
+#hero-header .title-text{
+  max-width: 990px;
+  margin: 0 auto;
+  color:gold;
+  position: relative;
+  transform: perspective(300px) rotateX(25deg);
+}
+#hero-header .title-text p{
+  font-size: 4em;
+  line-height: 150%;
+  animation: scrolldown 20s ease-in;
+  opacity: 0;
+}
+p.ironwars-logo{
+  font-family: starwars;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  margin: 5%;
+  margin: 10px;
+  text-shadow: -2px -2px 0 gold, -2px -1px 0 gold, -2px 0 0 gold, -2px 1px 0 gold, -2px 2px 0 gold, -1px -2px 0 gold, -1px -1px 0 gold, -1px 0 0 gold, -1px 1px 0 gold, -1px 2px 0 gold, 0 -2px 0 gold, 0 -1px 0 gold, 0 0 0 gold, 0 1px 0 gold, 0 2px 0 gold, 1px -2px 0 gold, 1px -1px 0 gold, 1px 0 0 gold, 1px 1px 0 gold, 1px 2px 0 gold, 2px -2px 0 gold, 2px -1px 0 gold, 2px 0 0 gold, 2px 1px 0 gold, 2px 2px 0 gold;
+}
+
+@keyframes opacity {
+  0% {
+    opacity:1 ; 
+  }
+  20%{
+    opacity:1;
+  }
+  25%{
+    opacity:0;
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: rotateX(30deg) translateY(75vh); opacity:1 ; 
+  }
+  75%{
+    opacity:1;
+  }
+  100% {
+    transform: rotateX(50deg) translateY(-100vh); opacity:0; ;
   }
 }
