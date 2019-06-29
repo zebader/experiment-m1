@@ -19,7 +19,9 @@ Home.prototype.generateElements = function() {
         ¿Conseguirán la victoria y se convertiran en los nuevos héroes de Ironhack ? ....
         </p>
       </article>
-
+      <img src="../public/images/falcon.png" class="falcon">
+      <img src="../public/images/tie.png" class="tie">
+      <img src="../public/images/darth.png" class="darth">
     </header>
 
   `;
