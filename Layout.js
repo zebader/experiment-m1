@@ -27,6 +27,12 @@ Layout.prototype.generateNavbar = function() {
   navbar.render();
 };
 
+Layout.prototype.generateFooter = function() {
+  var footer = new Footer(this.footer);
+  footer.generateFooter();
+  footer.render();
+};
+
 Layout.prototype.render = function() {
   this.rootElement.appendChild(this.layoutElements);
 };

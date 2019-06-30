@@ -78,6 +78,11 @@ p {
   background: #111;
 }
 
+#site-footer p{
+  color: var(--yellow-color);
+  text-align: center;
+}
+
 #site-main {
   width: 100%;
 }
@@ -123,7 +128,9 @@ p {
 
 a {
   color: var(--yellow-color);
+  font-family: 'Oswald', sans-serif;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .movie-card a {
@@ -197,26 +204,24 @@ a {
 }
 img.falcon{
     width: 50%;
-    left: 50%;
-    top:35%;
+    max-width: 600px;
     opacity: 0;
-    animation: falcon 1s ease-out forwards;
+    animation: falcon 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     animation-delay: 20s;
 }
 img.tie{
     width: 30%;
-    left: 50%;
-    top:30%;
+    max-width: 420px;
     opacity: 0;
-    animation: tie 1s ease-out forwards;
+    animation: tie 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     animation-delay: 20s;
 }
 img.darth{
   width: 70%;
   max-width: 650px;
-  top:20%;
+  transform: translate(-50%);
   opacity: 0;
-  animation: darth 1s ease-out forwards;
+  animation: darth 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 21s;
 }
 #hero-header h1{
@@ -241,6 +246,15 @@ img.darth{
   line-height: 150%;
   animation: scrolldown 20s ease-in;
   opacity: 0;
+}
+.hero-characters{
+  max-width: 1080px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 p.ironwars-logo{
   font-family: starwars;
@@ -302,9 +316,11 @@ p.ironwars-logo{
   0% {
     opacity: 1;
     top:100%;
+    left: 50%;
   }
   100%{
     opacity: 1;
     top:20%;
+    left: 50%;
   }
 }

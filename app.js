@@ -7,6 +7,7 @@ function main() {
 
   layout = generateLayoutComponent();
   layout.generateNavbar();
+  layout.generateFooter();
   var links = document.querySelectorAll('nav a');
   
   activateRouter(ENTRY_POINT);
