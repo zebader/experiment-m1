@@ -7,10 +7,11 @@ function MovieDetails(movie) {
 
 MovieDetails.prototype.generateElements = function() {
   this.pageElements = `
+  <section class="movie-details">
     <h1>${this.movie.title}</h1>
-    <p>${this.movie.director}</p>
-    <p>${this.movie.producer}</p>
-    <p>${this.movie.opening_crawl}</p>
+    <p>Director: ${this.movie.director} - Producer: ${this.movie.producer}</p>
+    <p class="movie-detail-text">${this.movie.opening_crawl}</p>
     <date>${this.movie.release_date}</date>
+  </section>
   `;
 };

@@ -16,9 +16,6 @@ Navbar.prototype.generateNavbar = function() {
         <li>
           <a href="#" url="/movies">Movies</a>
         </li>
-        <li>
-          <a href="#" url="/species">Species</a>
-        </li>
       </ul>
     </nav>
   `
